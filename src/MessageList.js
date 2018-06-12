@@ -16,9 +16,11 @@ const MessageList = () => {
     ]
 
     return (
-        <div className = "MessageList">
+        <div className="MessageList">
             {
-                messages.map(msg => <Message key = {msg.id} message={msg} />)
+                messages.map(msg => (
+                    <Message key={msg.id} message={msg} />
+                ))
             }
         </div>
     )
