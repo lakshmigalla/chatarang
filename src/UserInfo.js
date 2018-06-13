@@ -7,6 +7,7 @@ const UserInfo = (props) => {
             <div className="Avatar" style = {styles.avatar}><Avatar /></div>
             <div className="user" style = {styles.user}>
                 naynay
+                {/* {props.message.userName} */}
             </div>
             <a href="#" style = {styles.a}>
                 <i className="fas fa-sign-out-alt"></i>
