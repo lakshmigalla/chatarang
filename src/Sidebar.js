@@ -21,7 +21,7 @@ const Sidebar = (props) => {
                     <i className="fas fa-sign-out-alt"></i>
                 </a>    
             </div> */}
-            <UserInfo />
+            <UserInfo user = {props.user}/>
             <h1 style={{
                 ...styles.children,
                 ...styles.h1

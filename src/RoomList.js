@@ -4,43 +4,56 @@ import { StyleSheet, css } from 'aphrodite'
 
 const RoomList = () => {
     return (
-        <div className="RoomList">
-            <h2 style = {styles.roomList.h2}>Rooms</h2>
-            <ul style = {styles.roomList.ul}>
-                <li style = {styles.roomList.li}>
-                    <a href="#" style = {styles.roomList.liA}>
+        <nav className = {`RoomList ${css(styles.nav)}`}>
+            <h2 className = {css(styles.h2)}>Rooms</h2>
+            <ul className = {css(styles.list)}>
+                <li className={css(styles.item)}>
+                    <a href="#" className={css(styles.link)}>
                         general
                     </a>
                 </li>
-                <li style = {styles.roomList.li}>
-                    <a href="#" style = {styles.roomList.liA}>
+                <li className={css(styles.item)}>
+                    <a href="#" className={css(styles.link)}>
                         random
                     </a>
                 </li>
             </ul>
-        </div>
+        </nav>
     )
 }
 
-const styles = {
-    roomList: {
-        h2: {
-            fontSize: "1rem"
-        },
-        ul: {
-            listStyle: "none",
-            marginLeft: "0",
-            paddingLeft: "0"
-        },
-        li: {
-            marginBottom: "0.5rem"
-        },
-        liA: {
-            display: "block",
-            color: "whitesmoke",
-            textDecoration: "none"
-        }
-    }
-}
+const styles = StyleSheet.create({
+    nav: {
+      padding: '0 1rem',
+    },
+  
+    h2: {
+      fontSize: '1rem',
+    },
+  
+    list: {
+      listStyle: 'none',
+      marginLeft: 0,
+      paddingLeft: 0,
+    },
+  
+    item: {
+      marginBottom: '0.5rem',
+    },
+  
+    link: {
+      display: 'block',
+      color: 'whitesmoke',
+      textDecoration: 'none',
+  
+      '::before': {
+        content: '"# "',
+      },
+  
+      ':hover': {
+        backgroundColor: 'rgba(255, 255, 255, 0.2)',
+      }
+    },
+  })
 
 export default RoomList

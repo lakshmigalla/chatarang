@@ -1,10 +1,10 @@
 import React from 'react'
 
-const Metadata = (props) => {
+const Metadata = ({ message }) => {
     return (
-        <div class="Metadata" style = {styles.metadata}>
-            <div class="user" style = {styles.metadata.user}>{props.message.userName}</div>
-            <div class="time" style = {styles.metadata.time}>1:24 PM</div>
+        <div className="Metadata" style = {styles.metadata}>
+            <div class="user" style = {styles.metadata.user}>{message.user.userName}</div>
+            <div class="time" style = {styles.time}>1:24 PM</div>
         </div>
     )
 }
