@@ -2,7 +2,7 @@ import React from 'react'
 import RoomList from './RoomList';
 import UserInfo from './UserInfo';
 
-const Sidebar = (props) => {
+const Sidebar = ({user, signOut}) => {
     return (
         <aside
             className="Sidebar"
@@ -20,7 +20,7 @@ const Sidebar = (props) => {
                     <i className="fas fa-sign-out-alt"></i>
                 </a>    
             </div> */}
-            <UserInfo user = {props.user}/>
+            <UserInfo user = {user} signOut={signOut}/>
             <h1 style={{
                 ...styles.children,
                 ...styles.h1

@@ -4,6 +4,7 @@ import ChatHeader from './ChatHeader';
 import MessageList from './MessageList';
 import MessageForm from './MessageForm';
 import Avatar from './Avatar';
+import base from './base'
 
 class Chat extends Component {
     constructor () {
@@ -13,6 +14,14 @@ class Chat extends Component {
             messages: []
         }
 
+    }
+
+    componentDidMount () {
+        base.syncState('shmi', {
+            context: this,
+            state: 'messages',
+            asArray: true
+        })
     }
 
     addMessage = (body) => {
