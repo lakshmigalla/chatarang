@@ -1,17 +1,16 @@
 import React from 'react'
 import Avatar from './Avatar'
+import SignOut from './SignOut';
 
-const UserInfo = (props) => {
+const UserInfo = ({ user }) => {
     return (
         <div className="UserInfo" style = {styles.userInfo}>
-            <div className="Avatar" style = {styles.avatar}><Avatar /></div>
+            <Avatar user = {user} style = {styles.avatar}/>
             <div className="user" style = {styles.user}>
-                naynay
+                {user}
                 {/* {props.message.userName} */}
             </div>
-            <a href="#" style = {styles.a}>
-                <i className="fas fa-sign-out-alt"></i>
-            </a>
+            <SignOut />
         </div>
     )
 }
@@ -20,7 +19,8 @@ const styles = {
     userInfo: {
         marginBottom: "1rem",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        padding: "0 1rem"
     },
     avatar: {
         marginRight: "0.5rem"

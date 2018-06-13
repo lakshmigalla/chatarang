@@ -9,19 +9,19 @@ const Sidebar = (props) => {
             className="Sidebar"
             style={styles.sidebar}
         >
-            <div
+            {/* <div
                 className="UserInfo"
                 style={styles.children}
             >
-                {/* <div className="Avatar"><Avatar /></div>
+                <div className="Avatar"><Avatar /></div>
                 <div className="user">
                     {props.user.userName}
                 </div>
                 <a href="#">
                     <i className="fas fa-sign-out-alt"></i>
-                </a> */}
-                <UserInfo />
-            </div>
+                </a>    
+            </div> */}
+            <UserInfo />
             <h1 style={{
                 ...styles.children,
                 ...styles.h1
