@@ -51,7 +51,7 @@ class SignIn extends Component {
 
           <div className="blurb">
             <h2 className={css(styles.h2)}>You're in good company.</h2>
-            <p>Ones of people are already using Chatarang!</p>
+            {/* <p>Ones of people are already using Chatarang!</p> */}
           </div>
         </main>
       </div>
@@ -63,7 +63,11 @@ const styles = StyleSheet.create({
     display: 'flex',
     flexDirection: 'column',
     height: '100vh',
-    backgroundColor: '#f6f6f6',
+    // backgroundColor: '#f6f6f6',
+    backgroundImage: `url('https://images.unsplash.com/photo-1495583237039-44cb1143f0b6?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=77afd8d4aa023f6449f661f3cf3ce3d0&auto=format&fit=crop&w=2850&q=80')`,
+    backgroundPosition: 'center center',
+    backgroundRepeat: 'no-repeat',
+    backgroundSize: 'cover'
   },
   header: {
     backgroundColor: '#fff',
@@ -75,7 +79,7 @@ const styles = StyleSheet.create({
     boxShadow: '0 1px 1px rgba(0,0,0,.1)',
   },
   title: {
-    color: '#ff3344',
+    color: '#2CA3F3',
     fontWeight: 400,
     textTransform: 'uppercase',
     lineHeight: '80px',
@@ -93,7 +97,7 @@ const styles = StyleSheet.create({
   form: {
     width: '40rem',
     height: '15rem',
-    backgroundColor: 'white',
+    backgroundColor: '#CEE9FA',
     boxShadow: '0 1px 1px rgba(0,0,0,.1)',
     marginBottom: '2rem',
   },
@@ -106,6 +110,7 @@ const styles = StyleSheet.create({
     width: '20rem',
     fontSize: '1.5rem',
     border: 0,
+    backgroundColor: '#CEE9FA',
     borderBottom: '1px solid black',
     marginTop: '1rem',
     marginBottom: '1rem',
@@ -117,6 +122,7 @@ const styles = StyleSheet.create({
   },
   h2: {
     fontWeight: 'normal',
+    color: 'white'
   },
   button: {
     display: 'block',
@@ -124,7 +130,7 @@ const styles = StyleSheet.create({
     padding: '1rem 2rem',
     fontSize: '1.2rem',
     borderRadius: '1rem',
-    backgroundColor: '#ff3333',
+    backgroundColor: '#253687',
     color: 'white',
     width: '20rem',
   },

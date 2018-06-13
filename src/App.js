@@ -9,7 +9,7 @@ class App extends Component {
     user: {}
   }
 
-  componentDidMount() {
+  componentWillMount() {
     const user = JSON.parse(localStorage.getItem('user'))
     if (user) {
       this.setState({ user })
