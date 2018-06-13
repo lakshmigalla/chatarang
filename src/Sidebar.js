@@ -1,5 +1,7 @@
 import React from 'react'
 import Avatar from './Avatar';
+import RoomList from './RoomList';
+import UserInfo from './UserInfo';
 
 const Sidebar = (props) => {
     return (
@@ -11,13 +13,14 @@ const Sidebar = (props) => {
                 className="UserInfo"
                 style={styles.children}
             >
-                <div className="Avatar"><Avatar /></div>
+                {/* <div className="Avatar"><Avatar /></div>
                 <div className="user">
                     {props.user.userName}
                 </div>
                 <a href="#">
                     <i className="fas fa-sign-out-alt"></i>
-                </a>
+                </a> */}
+                <UserInfo />
             </div>
             <h1 style={{
                 ...styles.children,
@@ -29,11 +32,12 @@ const Sidebar = (props) => {
                 className="RoomList"
                 style = {styles.children}
             >
-                <h2>Rooms</h2>
+                {/* <h2>Rooms</h2>
                 <ul>
                     <li><a href="#">general</a></li>
                     <li><a href="#">random</a></li>
-                </ul>
+                </ul> */}
+                <RoomList />
             </nav>
         </aside>
 
