@@ -5,8 +5,8 @@ const Avatar = ({user, style}) => {
         <div className = "Avatar" 
             style = {{
                 ...styles,
-                style,
-                background: `url(https://api.adorable.io/avatars/285/${user.email})`
+                ...style,
+                background: `url(https://api.adorable.io/avatars/40/${user.email})`
             }}
         >
 

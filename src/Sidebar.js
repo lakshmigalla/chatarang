@@ -1,5 +1,4 @@
 import React from 'react'
-import Avatar from './Avatar';
 import RoomList from './RoomList';
 import UserInfo from './UserInfo';
 
