@@ -45,7 +45,11 @@ const Sidebar = ({user, signOut, loadRoom}) => {
 
 const styles = {
     sidebar: {
-        backgroundColor: "#333344",
+        // backgroundColor: "#333344",
+        backgroundImage: `url('https://images.unsplash.com/photo-1486546910464-ec8e45c4a137?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2c308fe62dad65bdfd4b1efb8bc6bb8&auto=format&fit=crop&w=2918&q=80')`,
+        backgroundPosition: 'center center',
+        backgroundRepeat: 'no-repeat',
+        backgroundSize: 'cover',
         color: "rgba(255, 255, 255, 0.8)",
         width: "12rem",
         padding: "1rem 0",
