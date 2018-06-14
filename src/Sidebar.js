@@ -60,7 +60,7 @@ const styles = {
         color: "white",
         fontSize: "1.2rem",
         marginTop: "0",
-    }
+    },
 }
 
 export default Sidebar

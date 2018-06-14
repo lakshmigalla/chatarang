@@ -2,7 +2,15 @@ import React from 'react'
 
 import { StyleSheet, css } from 'aphrodite'
 
-const RoomList = () => {
+function addRoom () {
+    <li className={css(styles.item)}>
+        <a href="#" className={css(styles.link)}>
+            {document.querySelector('input').value}
+        </a>
+    </li>
+}
+
+const RoomList = (props) => {
     return (
         <nav className = {`RoomList ${css(styles.nav)}`}>
             <h2 className = {css(styles.h2)}>Rooms</h2>
@@ -17,10 +25,26 @@ const RoomList = () => {
                         random
                     </a>
                 </li>
+                <input 
+                    type = "text" 
+                    id = "addedRoom" 
+                    placeholder = "Create new room"
+                    className={css(styles.input)}
+                >
+                </input>
+                <button 
+                    type = "submit" 
+                    className = {css(styles.button)} 
+                    onClick = {this.addRoom} 
+                >
+                    Add room
+                </button>
             </ul>
+            
         </nav>
     )
 }
+
 
 const styles = StyleSheet.create({
     nav: {
@@ -54,6 +78,32 @@ const styles = StyleSheet.create({
         backgroundColor: 'rgba(255, 255, 255, 0.2)',
       }
     },
+
+    input: {
+        flex: 1,
+        fontSize: '0.8rem',
+        border: 0,
+        marginBottom: '0.5rem',
+
+        ':focus': {
+            outline: 0,
+        },
+    },
+
+    button: {
+        display: 'block',
+        margin: '0 auto',
+        padding: '1rem 2rem',
+        fontSize: '1rem',
+        borderRadius: '1rem',
+        backgroundColor: '#253687',
+        color: 'white',
+        width: '9rem',
+
+        ':hover': {
+            backgroundColor: 'rgba(255, 255, 255, 0.2)',
+          }
+      },
   })
 
 export default RoomList
