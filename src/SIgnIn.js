@@ -14,19 +14,10 @@ class SignIn extends Component {
 
   handleSubmit = (ev) => {
     ev.preventDefault()
-    this.props.handleAuth({
-      uid: '234243',
-      displayName: this.state.email,
-      email: this.state.email,
-    })
   }
 
   authenticate = () => {
-    auth
-      .signInWithPopup(googleProvider)
-      .then(response => {
-        this.props.handleAuth(response.user)
-      })
+    auth.signInWithPopup(googleProvider)
   }
 
   render() {
