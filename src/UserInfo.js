@@ -7,7 +7,7 @@ const UserInfo = ({ user, signOut }) => {
         <div className="UserInfo" style = {styles.userInfo}>
             <Avatar user = {user} style = {styles.avatar}/>
             <div className="user" style = {styles.user}>
-                {user.userName}
+                {user.displayName}
             </div>
             <SignOut signOut = {signOut}/>
         </div>

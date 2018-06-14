@@ -3,7 +3,7 @@ import React from 'react'
 const Metadata = ({ message }) => {
     return (
         <div className="Metadata" style = {styles.metadata}>
-            <div class="user" style = {styles.metadata.user}>{message.user.userName}</div>
+            <div class="user" style = {styles.metadata.user}>{message.user.displayName}</div>
             <div class="time" style = {styles.time}>1:24 PM</div>
         </div>
     )
