@@ -17,7 +17,7 @@ const styles = StyleSheet.create({
       backgroundColor: 'transparent',
       border: 0,
       padding: 0,
-      color: 'rgba(255, 255, 255, 0.6)',
+      color: 'rgba(255,255,255, 0.4)',
       fontSize: '1.2rem',
       transition: 'color 0.25s ease-out',
   

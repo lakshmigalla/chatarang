@@ -19,6 +19,7 @@ const styles = {
         display: "flex",
         marginTop: "1rem",
         padding: "0 1rem",
+        color: "white",
 
         details: {
             flex: "1",

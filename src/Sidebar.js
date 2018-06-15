@@ -45,11 +45,12 @@ const Sidebar = ({user, signOut, loadRoom}) => {
 
 const styles = {
     sidebar: {
-        // backgroundColor: "#333344",
-        backgroundImage: `url('https://images.unsplash.com/photo-1486546910464-ec8e45c4a137?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=a2c308fe62dad65bdfd4b1efb8bc6bb8&auto=format&fit=crop&w=2918&q=80')`,
+        //backgroundColor: "#4c3465",
+        backgroundImage: `url('https://images.unsplash.com/photo-1499260320506-8144c5c33ddf?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=544e34eab2bbf0f864a6010191f8241d&auto=format&fit=crop&w=1624&q=80')`,
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
+        height: '100%',
         color: "rgba(255, 255, 255, 0.8)",
         width: "12rem",
         padding: "1rem 0",
@@ -63,7 +64,7 @@ const styles = {
     h1: {
         color: "white",
         fontSize: "1.2rem",
-        marginTop: "0",
+        marginTop: "0"
     },
 }
 

@@ -25,7 +25,7 @@ const styles = {
         marginRight: "0.5rem"
     },
     user: {
-        flex: "1"
+        flex: "1",
     },
     a: {
         border: "0",

@@ -18,7 +18,9 @@ const styles = {
         height: "3rem",
         padding: "0 1rem",
         display: "flex",
-        alignItems: "center"
+        alignItems: "center",
+        //width: "100%",
+        //position: "fixed"
     },
     h2: {
         fontSize: "1.1rem",
