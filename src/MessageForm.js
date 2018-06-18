@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
 import { StyleSheet, css } from 'aphrodite'
-import RoomList from './RoomList'
 
 class MessageForm extends Component {
   state = {

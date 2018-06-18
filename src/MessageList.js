@@ -28,7 +28,7 @@ const styles = {
         backgroundSize: 'cover',
         flex: "1",
         paddingBottom: "1rem",
-        overFlowY: "scroll",
+        overflowY: "scroll",
         roomAnnouncment: {
             padding: "2rem 1rem",
             color: "white",
