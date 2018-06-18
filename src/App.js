@@ -61,7 +61,8 @@ class App extends Component {
           <Route path="/sign-in" component={SignIn} />
           <Route
             path="/rooms/:roomName"
-            render={navProps => (
+            render = {
+              navProps => (
               <Main
                 user={this.state.user}
                 signOut={this.signOut}

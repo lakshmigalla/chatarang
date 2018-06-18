@@ -36,7 +36,7 @@ const Sidebar = ({user, signOut, loadRoom}) => {
                     <li><a href="#">general</a></li>
                     <li><a href="#">random</a></li>
                 </ul> */}
-                <RoomList loadRoom = {loadRoom} />
+                <RoomList />
             </nav>
         </aside>
 
