@@ -8,69 +8,73 @@ import base from './base'
 
 class RoomList extends Component {
     state = {
-        rooms: {},
+      rooms: {},
     }
+  
     componentDidMount() {
-        base.syncState(
-            'rooms',
-            {
-                context: this,
-                state: 'rooms'
-            }
-        )
+      base.syncState(
+        'rooms',
+        {
+          context: this,
+          state: 'rooms',
+        }
+      )
     }
-
+  
     addRoom = (room) => {
-        const rooms = { ...this.state.rooms }
-        rooms[room.name] = room
-        this.setState({ rooms })
+      const rooms = {...this.state.rooms}
+      rooms[room.name] = room
+      this.setState({ rooms })
     }
+  
     render() {
-        return (
-            <Switch>
-                <Route
-                    path="/rooms/new"
-                    render={
-                        navProps => (
-                            <RoomForm
-                                addRoom={this.addRoom}
-                                {...navProps}
-                            />
-                        )
-                    }
+      return (
+        <Switch>
+          <Route
+            path="/rooms/new"
+            render={
+              navProps => (
+                <RoomForm
+                  addRoom={this.addRoom}
+                  {...navProps}
                 />
-                <Route
-                    render={
-                        () => (
-                            <nav className={`RoomList ${css(styles.nav)}`}>
-                                <div className={css(styles.heading)}>
-                                    <h2 className={css(styles.h2)}>Rooms</h2>
-                                    <Link
-                                        className={css(styles.button)}
-                                        to = "/rooms/new"
-                                    >
-                                        <i className="fas fa-plus-circle" title="Add room"></i>
-                                    </Link>
-                                </div>
-                                <ul className={css(styles.list)}>
-                                    {
-                                        Object.keys(this.state.rooms).map(roomName => (
-                                            <RoomLink
-                                                key={roomName}
-                                                room={this.state.rooms[roomName]}
-                                                loadRoom = {this.props.loadRoom}
-                                            />
-                                        ))
-                                    }
-                                </ul>
-                            </nav>
-                        )
+              )
+            }
+          />
+          <Route
+            render={
+              () => (
+                <nav
+                  className={`RoomList ${css(styles.nav)}`}
+                >
+                  <div className={css(styles.heading)}>
+                    <h2 className={css(styles.h2)}>Rooms</h2>
+                    <Link
+                      className={css(styles.button)}
+                      to="/rooms/new"
+                    >
+                      <i className="fas fa-plus-circle" title="Add room"></i>
+                    </Link>
+                  </div>
+                  <ul className={css(styles.list)}>
+                    {
+                      Object.keys(this.state.rooms).map(roomName => (
+                        <RoomLink
+                          key={roomName}
+                          room={this.state.rooms[roomName]}
+                          loadRoom={this.props.loadRoom}
+                        />
+                      ))
                     }
-                />
-            </Switch>
-        )
+                  </ul>
+                </nav>
+              )
+            }
+          />
+        </Switch>
+      )
     }
-}
+  }
 
 
 const styles = StyleSheet.create({
