@@ -49,7 +49,7 @@ class App extends Component {
       uid: oauthUser.uid,
       displayName: oauthUser.displayName,
       email: oauthUser.email,
-      //photoUrl: oauthUser.photoUrl
+      photoUrl: oauthUser.photoURL
     }
     // update list of users
     const users = {...this.state.users}
@@ -79,7 +79,7 @@ class App extends Component {
         <Switch>
           <Route 
             path="/sign-in"  
-            render = {navProps => (
+            render = {() => (
               this.signedIn()
                 ? <Redirect to = "/rooms/general" />
                 : <SignIn />
@@ -87,8 +87,7 @@ class App extends Component {
           />
           <Route
             path="/rooms/:roomName"
-            render = {
-              navProps => (
+            render = {navProps => (
               this.signedIn()
               ? <Main
                   {...mainProps}
@@ -98,8 +97,7 @@ class App extends Component {
             )}
           />
           <Route 
-            render = {
-              navProps => (
+            render = {() => (
                 this.signedIn()
                 ? <Redirect to = "/rooms/general" />
                 : <Redirect to = "/sign-in" />
