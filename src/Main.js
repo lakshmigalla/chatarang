@@ -47,8 +47,18 @@ class Main extends Component {
   }
 
   loadValidRoom = () => {
-    const roomName = Object.keys(this.shouldComponentUpdate.rooms)[0]
+    const roomName = Object.keys(this.state.rooms)[0]
     this.props.history.push(`/rooms/${roomName}`)
+  }
+
+  removeRoom = (room) => {
+    const rooms = {...this.state.rooms}
+    rooms[room.name] = null
+
+    this.setState(
+      { rooms },
+      this.loadValidRoom
+    )
   }
 
   render() {
@@ -61,6 +71,7 @@ class Main extends Component {
         <Chat
           user={this.props.user}
           room={this.state.room}
+          removeRoom={this.removeRoom}
         />
       </div>
     )
