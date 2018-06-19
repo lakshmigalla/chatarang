@@ -2,7 +2,7 @@ import React, { Component } from 'react';
 import { Route, Switch, Redirect } from 'react-router-dom'
 
 import './App.css';
-import {auth} from './base'
+import base, {auth} from './base'
 import SignIn from './SignIn'
 import Main from './Main'
 
@@ -11,15 +11,19 @@ class App extends Component {
     super()
     const user = JSON.parse(localStorage.getItem('user')) || {}
     this.state = {
-      user
+      user,
+      users: {}
     }
   }
 
   componentDidMount() {
-    const user = JSON.parse(localStorage.getItem('user'))
-    if (user) {
-      this.setState({ user })
-    }
+    base.syncState(
+      'users',
+      {
+        context: this,
+        state: 'users'
+      }
+    )
 
     auth.onAuthStateChanged (
       user => {
@@ -40,13 +44,18 @@ class App extends Component {
   }
 
   handleAuth = (oauthUser) => {
+    // build user object
     const user = {
       uid: oauthUser.uid,
       displayName: oauthUser.displayName,
       email: oauthUser.email,
       //photoUrl: oauthUser.photoUrl
     }
-    this.setState({ user })
+    // update list of users
+    const users = {...this.state.users}
+    users[user.uid] = user
+    // update state and localStorage
+    this.setState({ user, users })
     localStorage.setItem('user', JSON.stringify(user))
   }
 

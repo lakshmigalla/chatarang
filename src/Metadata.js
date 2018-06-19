@@ -4,7 +4,7 @@ import moment from 'moment'
 const Metadata = ({ message }) => {
     return (
         <div className="Metadata" style = {styles.metadata}>
-            <div class="user" style = {styles.metadata.user}>{message.user.displayName}</div>
+            <div className="user" style = {styles.metadata.user}>{message.user.displayName}</div>
             <span title = {moment(message.createdAt).format('D MMM @ h:mm a')}>
                 {moment(message.createdAt).format('D MMM @ h:mm a')}
             </span>
