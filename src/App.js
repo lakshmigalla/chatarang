@@ -7,8 +7,12 @@ import SignIn from './SignIn'
 import Main from './Main'
 
 class App extends Component {
-  state = {
-    user: {}
+  constructor () {
+    super()
+    const user = JSON.parse(localStorage.getItem('user')) || {}
+    this.state = {
+      user
+    }
   }
 
   componentDidMount() {
