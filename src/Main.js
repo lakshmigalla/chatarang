@@ -15,7 +15,7 @@ class Main extends Component {
   }
 
   componentDidMount() {
-    const {roomName} = this.props.match.params
+    const { roomName } = this.props.match.params
 
     base.syncState(
       'rooms',
@@ -34,8 +34,21 @@ class Main extends Component {
   }
 
   loadRoom = (roomName) => {
+    if (roomName == 'new') {
+      return null
+    }
     const room = this.state.rooms[roomName]
-    this.setState({ room })
+    if (room) {
+      this.setState({ room })
+    }
+    else {
+      this.loadValidRoom()
+    }
+  }
+
+  loadValidRoom = () => {
+    const roomName = Object.keys(this.shouldComponentUpdate.rooms)[0]
+    this.props.history.push(`/rooms/${roomName}`)
   }
 
   render() {
