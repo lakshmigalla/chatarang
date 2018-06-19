@@ -52,7 +52,6 @@ const styles = StyleSheet.create({
     borderRadius: '0.5rem',
     margin: '0.25rem',
     padding: 0,
-    bottom: 0,
     //width: '85%',
     //position: 'fixed'
   },

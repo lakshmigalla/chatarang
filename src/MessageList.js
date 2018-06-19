@@ -38,7 +38,7 @@ const styles = {
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        flex: "1",
+        flex: 1,
         paddingBottom: "1rem",
         overflowY: "scroll",
         roomAnnouncment: {

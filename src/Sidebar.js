@@ -50,7 +50,7 @@ const styles = {
         backgroundPosition: 'center center',
         backgroundRepeat: 'no-repeat',
         backgroundSize: 'cover',
-        height: '100%',
+        //height: '100%',
         color: "rgba(255, 255, 255, 0.8)",
         width: "12rem",
         padding: "1rem 0",
