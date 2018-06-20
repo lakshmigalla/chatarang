@@ -37,7 +37,8 @@ const Sidebar = ({user, signOut, users, rooms, addRoom}) => {
                     <li><a href="#">random</a></li>
                 </ul> */}
                 <RoomList 
-                    users = {users} 
+                    users = {users}
+                    user = {user} 
                     rooms = {rooms}
                     addRoom = {addRoom}    
                 />
