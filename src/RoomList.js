@@ -8,7 +8,7 @@ import RoomForm from './RoomForm'
 class RoomList extends Component {
 
     render() {
-      const { rooms } = this.props
+      const rooms = this.props.rooms.filter(room => !room.dm)
 
       return (
         <Switch>

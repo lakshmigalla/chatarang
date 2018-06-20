@@ -4,7 +4,7 @@ const ChatHeader = ( { room, removeRoom } ) => {
     return (
         <div className="ChatHeader" style = {styles.chatHeader}>
             <div className="roomInfo">
-                <h2 style = {styles.h2}>#{room.name}</h2>
+                <h2 style = {styles.h2}> #{room.displayName}</h2>
                 <p style = {styles.p}>{room.description}</p>
             </div>
             <button

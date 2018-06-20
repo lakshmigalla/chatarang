@@ -3,14 +3,14 @@ import { StyleSheet, css } from 'aphrodite'
 import Select from 'react-select'
 import 'react-select/dist/react-select.css'
 
-class RoomForm extends Component {
+class DirectMessageForm extends Component {
   state = {
     room: {
         name: '',
-        description: '',
-        public: true,
-        dm: false,
-        members: []
+        description: 'Direct message',
+        public: false,
+        dm: true,
+        members: [],
     },
   }
 
@@ -32,17 +32,16 @@ class RoomForm extends Component {
   handleSubmit = (ev) => {
     ev.preventDefault()
     this.props.addRoom(this.state.room)
-    this.props.history.push(`/rooms/${this.state.room.name}`)
+    this.props.history.goBack()
   }
 
   handleChange = (ev) => {
     const room = {...this.state.room}
-  
+
     const target = ev.target
     const value = target.type === 'checkbox' ? target.checked : target.value
-    
-    room[target.name] = value
 
+    room[target.name] = value
     this.setState({ room })
   }
 
@@ -57,47 +56,13 @@ class RoomForm extends Component {
     return (
       <div className={`RoomForm ${css(styles.roomForm)}`}>
         <main className={css(styles.main)}>
-          <h2 className={css(styles.title)}>Create a room</h2>
+          <h2 className={css(styles.title)}>
+            Direct Message
+          </h2>
           <form
             className={css(styles.form)}
             onSubmit={this.handleSubmit}
           >
-            <p>
-              <label className={css(styles.label)}>
-                <input
-                  type="checkbox"
-                  name="public"
-                  checked={this.state.room.public}
-                  onChange={this.handleChange}
-                />
-                Public
-              </label>
-            </p>
-            <p>
-              <label htmlFor="name" className={css(styles.label)}>
-                Room Name
-              </label>
-              <input
-                type="text"
-                name="name"
-                value={this.state.room.name}
-                className={css(styles.input, styles.textInput)}
-                onChange={this.handleChange}
-                autoFocus
-              />
-            </p>
-            <p>
-              <label htmlFor="description" className={css(styles.label)}>
-                Description
-              </label>
-              <input
-                type="text"
-                name="description"
-                value={this.state.room.description}
-                className={css(styles.input, styles.textInput)}
-                onChange={this.handleChange}
-              />
-            </p>
             {
               !this.state.room.public && (
                 <div>
@@ -105,7 +70,7 @@ class RoomForm extends Component {
                     htmlFor="members"
                     className={css(styles.label)}
                   >
-                    Members
+                    Start a conversation
                   </label>
                   <Select
                     multi
@@ -113,8 +78,8 @@ class RoomForm extends Component {
                     options={this.users()}
                     value={this.state.room.members}
                     onChange={this.handleSelectChange}
-                    className = {css(styles.input)}
-                    placeholder = "Invite people ..."
+                    className={css(styles.input)}
+                    placeholder="Invite people..."
                   />
                 </div>
               )
@@ -177,7 +142,7 @@ const styles = StyleSheet.create({
     backgroundColor: 'white',
     boxShadow: '0 1px 1px rgba(0,0,0,.1)',
     marginBottom: '2rem',
-    padding: '0 2rem 2rem',
+    padding: '2rem',
   },
 
   label: {
@@ -200,7 +165,7 @@ const styles = StyleSheet.create({
   },
 
   textInput: {
-    width: '20rem'
+    width: '20rem',
   },
 
   h2: {
@@ -231,4 +196,4 @@ const styles = StyleSheet.create({
   },
 })
 
-export default RoomForm
+export default DirectMessageForm

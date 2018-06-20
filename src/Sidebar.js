@@ -1,6 +1,7 @@
 import React from 'react'
 import RoomList from './RoomList';
 import UserInfo from './UserInfo';
+import DirectMessageList from './DirectMessageList';
 
 const Sidebar = ({user, signOut, users, rooms, addRoom}) => {
     return (
@@ -41,6 +42,12 @@ const Sidebar = ({user, signOut, users, rooms, addRoom}) => {
                     user = {user} 
                     rooms = {rooms}
                     addRoom = {addRoom}    
+                />
+                <DirectMessageList
+                    users = {users}
+                    user = {user} 
+                    rooms = {rooms}
+                    addRoom = {addRoom}
                 />
             </nav>
         </aside>
