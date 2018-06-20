@@ -2,7 +2,7 @@ import React from 'react'
 import RoomList from './RoomList';
 import UserInfo from './UserInfo';
 
-const Sidebar = ({user, signOut, users}) => {
+const Sidebar = ({user, signOut, users, rooms, addRoom}) => {
     return (
         <aside
             className="Sidebar"
@@ -36,7 +36,11 @@ const Sidebar = ({user, signOut, users}) => {
                     <li><a href="#">general</a></li>
                     <li><a href="#">random</a></li>
                 </ul> */}
-                <RoomList users = {users} />
+                <RoomList 
+                    users = {users} 
+                    rooms = {rooms}
+                    addRoom = {addRoom}    
+                />
             </nav>
         </aside>
 
