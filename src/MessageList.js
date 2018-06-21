@@ -46,7 +46,7 @@ const styles = {
         paddingBottom: "1rem",
         overflowY: "scroll",
         roomAnnouncment: {
-            padding: "2rem 1rem",
+            padding: '2rem 1rem 10rem',
             color: "white",
             h3: {
                 fontSize: "1.5rem",
