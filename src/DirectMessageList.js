@@ -92,6 +92,7 @@ const styles = StyleSheet.create({
     transition: 'color 0.25s ease-out',
 
     ':hover': {
+      cursor: 'pointer',
       color: 'white',
     }
   },

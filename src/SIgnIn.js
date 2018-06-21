@@ -48,7 +48,7 @@ class SignIn extends Component {
             <h1>Welcome!</h1>
             <button 
               type = "button" 
-              className={css(styles.button)} 
+              className={css(styles.googleButton)} 
               onClick = {this.authenticate}
             >
               <i className = {`fab fa-google ${css(styles.brandIcon)}`}></i>
@@ -56,7 +56,7 @@ class SignIn extends Component {
             </button>
             <button 
               type = "button" 
-              className={css(styles.button)} 
+              className={css(styles.githubButton)} 
               onClick = {this.authenticateGit}
             >
               <i className = {`fab fa-github ${css(styles.brandIcon)}`}></i>
@@ -64,7 +64,7 @@ class SignIn extends Component {
             </button>
             <button 
               type = "button" 
-              className={css(styles.button)} 
+              className={css(styles.fbButton)} 
               onClick = {this.authenticateFb}
             >
               <i className = {`fab fa-facebook ${css(styles.brandIcon)}`}></i>
@@ -147,7 +147,37 @@ const styles = StyleSheet.create({
     fontWeight: 'normal',
     color: 'white'
   },
-  button: {
+  googleButton: {
+    display: 'block',
+    margin: '0 auto',
+    padding: '1rem 2rem',
+    fontSize: '1.2rem',
+    borderRadius: '1rem',
+    backgroundColor: '#db3236',
+    color: 'white',
+    width: '20rem',
+    marginTop: '1rem',
+    marginBottom: "1rem",
+    ':hover': {
+      cursor: 'pointer'
+    }
+  },
+  githubButton: {
+    display: 'block',
+    margin: '0 auto',
+    padding: '1rem 2rem',
+    fontSize: '1.2rem',
+    borderRadius: '1rem',
+    backgroundColor: 'black',
+    color: 'white',
+    width: '20rem',
+    marginTop: '1rem',
+    marginBottom: "1rem",
+    ':hover': {
+      cursor: 'pointer'
+    }
+  },
+  fbButton: {
     display: 'block',
     margin: '0 auto',
     padding: '1rem 2rem',
@@ -157,7 +187,10 @@ const styles = StyleSheet.create({
     color: 'white',
     width: '20rem',
     marginTop: '1rem',
-    marginBottom: "1rem"
+    marginBottom: "1rem",
+    ':hover': {
+      cursor: 'pointer'
+    }
   },
   brandIcon: {
     marginRight: "1rem"

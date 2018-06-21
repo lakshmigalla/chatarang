@@ -32,6 +32,7 @@ const styles = StyleSheet.create({
 
         ':hover': {
             backgroundColor: 'rgba(255, 255, 255, 0.2)',
+            cursor: 'pointer'
         }
     },
 })
