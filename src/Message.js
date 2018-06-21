@@ -99,6 +99,7 @@ const styles = StyleSheet.create({
         right: '0.5rem',
 
         ':hover': {
+            cursor: 'pointer',
             color: 'white',
         },
     },
