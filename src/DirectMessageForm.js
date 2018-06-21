@@ -117,7 +117,8 @@ const styles = StyleSheet.create({
     backgroundImage: `url('https://images.unsplash.com/photo-1527100673774-cce25eafaf7f?ixlib=rb-0.3.5&ixid=eyJhcHBfaWQiOjEyMDd9&s=77e25cda9693040656f2de75ef2c0637&auto=format&fit=crop&w=668&q=80')`,
     backgroundPosition: 'center center',
     backgroundRepeat: 'no-repeat',
-    backgroundSize: 'cover'
+    backgroundSize: 'cover',
+    zIndex: 1000,
   },
 
   title: {
