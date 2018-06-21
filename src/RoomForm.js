@@ -78,6 +78,7 @@ class RoomForm extends Component {
                 Room Name
               </label>
               <input
+                required
                 type="text"
                 name="name"
                 value={this.state.room.name}

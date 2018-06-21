@@ -74,6 +74,7 @@ class DirectMessageForm extends Component {
                   </label>
                   <Select
                     multi
+                    required
                     name="members"
                     options={this.users()}
                     value={this.state.room.members}
